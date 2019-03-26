@@ -1,0 +1,14 @@
+<h1>Upload video in your library</h1>
+<input id="file-field" name="file-field" (change)="uploadFile($event)" type="file" accept=".png,.jpg,.jpeg,.mp4">
+{{videos | json}}
+<ul>
+  <li *ngFor="let video of videos ">
+    <div style="padding: 50px;">
+      <vg-player>
+        <video [vgMedia]="media" #media id="singleVideo" preload="auto" controls>
+          <source src="http://static.videogular.com/assets/videos/videogular.mp4" type="video/mp4" *ngIf="video">
+        </video>
+      </vg-player>
+    </div>
+  </li>
+</ul>

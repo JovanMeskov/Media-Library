@@ -1,0 +1,6 @@
+<ng2-smart-table [settings]="settings" [source]="books" (createConfirm)="onCreateConfirm($event)"
+                 (deleteConfirm)="onDeleteConfirm($event)"
+                 (editConfirm)="onSaveConfirm($event)">
+
+</ng2-smart-table>
+{{books | json}}
